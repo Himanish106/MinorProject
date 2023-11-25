@@ -1,0 +1,619 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@500;800&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&display=swap");
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 57%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* #################################### UTILITY CLASSES ########################################## */
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+.font-color {
+  font-weight: 600;
+  color: rgb(19, 37, 37);
+  font-size: 2.7rem;
+  font-family: "Inconsolata", monospace;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 50px;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.btn-primary {
+  color: #fff;
+  background: #047e65ab;
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover {
+  background: #0f6855;
+}
+.captions {
+  font-size: 1.5rem;
+}
+
+.small-heading {
+  font-size: 1.85rem;
+}
+
+.md-heading {
+  font-size: 3rem;
+}
+/* Add this CSS to your existing stylesheet */
+.btn-secondary {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #000000ce;
+  border: none;
+  border-radius: 50px;
+  padding: 1em 2.5em;
+  font-weight: 500;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-secondary::before {
+  content: "\2192"; /* Unicode arrow character */
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust the distance from the right */
+  transform: translateY(-50%);
+  font-size: 24px; /* Adjust the arrow size */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.btn-secondary:hover {
+  padding-right: 45px; /* Add space for the arrow */
+  background-color: #000000ef;
+}
+
+.btn-secondary:hover::before {
+  opacity: 1;
+}
+
+/* ##################################### NAVBAR STYLING ########################################### */
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+
+.navbar {
+  box-shadow: 0px 5px 10px 0px #aaa;
+  position: fixed;
+  opacity: 0.85;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  z-index: 999;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+}
+
+.menu-items {
+  display: flex;
+  order: 2;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-left: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.logo {
+  order: 1;
+  font-size: 3rem;
+}
+
+.navbar a {
+  color: #444;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s all ease-in-out;
+}
+
+.navbar a:hover {
+  color: #117964;
+  border-bottom: 1px solid #117964;
+}
+
+/* ################################ SECTION 1(SHOWCASE SECTION STYLING) ################################## */
+
+.showcase-area {
+  height: 90vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.062),
+      rgba(255, 255, 255, 0.445)
+    ),
+    url("../Images/Showcase\ Section.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.showcase-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 2rem;
+}
+
+.main-title {
+  text-transform: uppercase;
+}
+
+/* ############################## SECTION 2 ############################################# */
+
+.our-vision {
+  background-color: #9493932d;
+}
+
+.vision-container .caption-width {
+  font-size: 5rem;
+  width: 58%;
+}
+
+.vision-container {
+  padding: 5rem 0rem;
+}
+
+.our-vision .main-characteristics {
+  display: flex;
+  /* text-align: center; */
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* .our-vision .sub-caption {
+  font-size: 1.85rem;
+} */
+
+.char1,
+.char2,
+.char3 {
+  margin-top: 2em;
+  border-top: 2px solid black;
+  padding-top: 1.5em;
+  width: 375px;
+  opacity: 0;
+  transform: translateX(-500px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+@keyframes appearFromLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.char1.animation,
+.char2.animation,
+.char3.animation {
+  animation: appearFromLeft 1s ease forwards;
+}
+
+/* .our-vision .captions {
+  font-size: 1.5rem;
+} */
+
+.main-caption {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+}
+
+/* ###################### SECTION 3 ##################################### */
+
+.about-us {
+  padding: 5rem 0rem;
+  background-color: #9493930e;
+}
+
+.about-us-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-us-container .about-text {
+  width: 555px;
+}
+
+.about-us-container .about-text .about-us-heading {
+  font-family: "Roboto Slab", serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.527);
+}
+
+.about-us-container .about-image {
+  width: 555px;
+}
+
+.about-us-container .about-image img {
+  display: block;
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  object-position: center;
+}
+/* ##################################### SECTION 4 ######################################### */
+.login {
+  background-color: #9493930e;
+  padding: 5rem 0rem;
+}
+.login .login-container {
+  display: flex;
+  justify-content: space-between;
+}
+.login-container .login-heading {
+  font-size: 3.9rem;
+  width: 555px;
+}
+.login-container .login-text {
+  width: 555px;
+}
+.login-text .login-text-size {
+  font-size: 2rem;
+}
+
+/* ##################################### SECTION 5 ######################################### */
+
+.services {
+  background-color: #94939341;
+}
+.services-container {
+  /* padding: 3rem 0 3rem 0; */
+  padding: 5rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.services-container .services-img {
+  width: 575px;
+}
+.services-img img {
+  display: block;
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.services-container .service-text {
+  width: 555px;
+}
+
+.service-text .para-padding {
+  padding-bottom: 1rem;
+}
+
+.services-container .service-heading {
+  font-family: "Roboto Slab", serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.527);
+}
+/* ################################### SECTION 6 ########################################### */
+.product-intro {
+  background-color: #9493930e;
+  padding: 5rem 0rem;
+}
+.product-intro .product-intro-container {
+  display: flex;
+  justify-content: space-between;
+}
+.product-intro-container .product-heading {
+  font-size: 3.9rem;
+  width: 555px;
+}
+.product-intro-container .product-text {
+  width: 555px;
+}
+.product-text .product-text-width {
+  font-size: 2rem;
+}
+/* ################################### SECTION 7 ########################################### */
+#testimonials {
+  padding: 5rem 0rem;
+  background: rgb(243, 243, 243);
+}
+
+.testimonial-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #555;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  padding: 1rem;
+}
+
+.testimonial-box .checked {
+  color: #ff9529;
+}
+
+.testimonial-box .testimonial-text {
+  margin: 1rem 0;
+  color: #444;
+}
+
+.testimonial-box {
+  text-align: center;
+  padding: 1rem;
+}
+
+.customer-photo img {
+  display: block;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+  margin: auto;
+}
+
+/* #################################### SECTION 8 ####################################### */
+.contact-us {
+  padding: 5rem 0rem;
+}
+.contact-us .contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-container .contact-feedback {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.contact-container .contact-heading {
+  width: 100%;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.contact-feedback .border-bottom {
+  border-top: 2px solid black;
+  padding-top: 0.5em;
+}
+
+.contact-feedback .contact-intro,
+.contact-feedback .feedback-intro {
+  width: 555px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.footer {
+  background: #161c1f;
+  color: #f4f4f4;
+  padding: 2rem;
+  text-align: center;
+}
+
+.social-media-links i {
+  margin: 2rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-media-links a {
+  text-decoration: none;
+  color: inherit; /* Inherit the color from the parent */
+}
+
+.social-media-links a:hover {
+  color: #e9dfdfd8;
+}
+
+/* ########################################### MEDIA QUERIES ################################################# */
+@media (max-width: 768px) {
+  .navbar {
+    opacity: 0.95;
+  }
+  .navbar-container input[type="checkbox"],
+  .navbar-container .hamburger-lines {
+    display: block;
+  }
+  .navbar-container {
+    display: block;
+    position: relative;
+    height: 64px;
+  }
+  .navbar-container input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 40px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+  }
+  .navbar-container .hamburger-lines {
+    display: block;
+    height: 32px;
+    width: 40px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .navbar-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #333;
+  }
+  .navbar-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4% ease-in-out;
+  }
+  .navbar-container .hamburger-lines .line2 {
+    transition: transform 0.4% ease-in-out;
+  }
+  .navbar-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4% ease-in-out;
+  }
+  .navbar .menu-items {
+    padding-top: 100px;
+    background: #fff;
+    height: 100vh;
+    max-width: 300px;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 5px 0px 10px 0px #aaa;
+  }
+  .navbar .menu-items li {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .logo {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 3rem;
+  }
+  .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translate(0);
+  }
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+  html {
+    font-size: 7.2px;
+  }
+  .our-vision .main-characteristics,
+  .about-us-container,
+  .login .login-container,
+  .services .services-container,
+  .product-intro .product-intro-container,
+  .contact-us .contact-container,
+  .contact-container .contact-feedback,
+  .testimonial-container {
+    /* text-align: center; */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .char1,
+  .char2,
+  .char3,
+  .about-us-container .about-text,
+  .about-us-container .about-image,
+  .login-container .login-text,
+  .services-container .services-img,
+  .services-container .service-text,
+  .product-intro-container .product-text,
+  .contact-feedback .contact-intro,
+  .contact-feedback .feedback-intro {
+    width: 100%;
+  }
+  .about-us-container .about-image {
+    padding: 1rem 0;
+  }
+  .captions {
+    font-size: 2rem;
+  }
+  .vision-container .caption-width,
+  .login-container .login-heading,
+  .product-intro-container .product-heading,
+  .contact-container .contact-heading {
+    font-size: 3rem;
+    width: 100%;
+    padding: 0.5rem;
+  }
+  .testimonial-container .testimonial-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .testimonial-box .customer-photo {
+    order: 1;
+  }
+  .testimonial-box .star-rating {
+    order: 2;
+  }
+  .testimonial-box .testimonial-text {
+    order: 3;
+  }
+  .showcase-container .showcase-caption {
+    margin-left: 1rem;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .showcase-area{
+    height: 70vh;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1000px) {
+  html {
+    font-size: 8px;
+  }
+}

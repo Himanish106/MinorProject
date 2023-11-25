@@ -1,0 +1,57 @@
+.main-table {
+    min-height: 100vh;
+    padding-top: 10rem;
+    padding-bottom: 9rem;
+    margin: 0 auto;
+}
+.scrollable-table {
+    width: 100%;
+    overflow-y: auto;
+    max-height: 500px;
+    font-size: 1.4rem;
+    /* padding-top: 9rem;
+      margin-bottom: 30rem; */
+}
+
+.fixed-header {
+    position: sticky;
+    top: 0;
+    background-color: #f2f2f2;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th,
+td {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #dddddd;
+}
+
+th.dob,
+td.dob {
+    width: 50%;
+}
+input[type="number"] {
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 50px;
+}
+button{
+    font-size: 2rem;
+    width: 50%;
+    transition: all 0.3s ease-in-out;
+}
+button:hover{
+    color: red;
+    background: rgba(141, 141, 141, 0.39);
+    outline: none;
+    border: none;
+}

@@ -1,0 +1,65 @@
+body {
+    background-image: url("../Images/contactBackground.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+}
+
+.logout-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    /* margin-bottom: 100px;  */
+    background-color: #ffffffa9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 1200px;
+    height: 450px;
+}
+
+button {
+    display: inline-block;
+    padding: 1.7rem 3.4rem;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50px;
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-weight: 400;
+    background-color: black;
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.5rem;
+}
+
+button:hover {
+    background-color: #353131d8;
+}
+
+.fonts {
+    font-size: 4.5rem!important;
+    font-weight: 600;
+}
+.logout-container .logout-buttons {
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+    .container1 {
+        min-height: 87.5vh;
+    }
+}

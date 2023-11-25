@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap");
+body {
+    background-image: url("../Images/profile-page-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.user-profile {
+    height: 750px;
+    padding-top: 10rem;
+    padding-bottom: 9rem;
+    width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+.profile-form {
+    height: 100%;
+    width: 450px;
+    background-color: rgba(212, 212, 212, 0.322);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-img {
+    padding-top: 2rem;
+    margin-left: 1rem;
+}
+
+.profile-img img {
+    width: 19rem;
+    height: 18rem;
+    border-radius: 50%;
+}
+.profile-details {
+    display: flex;
+    flex-direction: column;
+}
+.profile-details .username {
+    margin-left: 2rem;
+}
+.profile-details .username input {
+    font-size: 2.7rem;
+    font-weight: bold;
+}
+.profile-form input[readonly] {
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.profile-details .personal-details {
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+.profile-details .personal-details label {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.profile-details .personal-details input {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.personal-details .age,
+.personal-details .email,
+.personal-details .password,
+.personal-details .contact,
+.personal-details .WhatsApp {
+    padding-bottom: 1rem;
+}
+
+.user-profile .user-form {
+    width: 730px;
+    background-color: rgba(189, 189, 189, 0.192);
+    height: 100%;
+}
+.user-profile .user-form label {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-left: 1.5rem;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+.user-profile .user-form input {
+    display: block;
+    width: 94%;
+    padding: 1rem 1rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    outline: none;
+    border: 0.3px solid rgba(0, 0, 0, 0.137);
+    margin-bottom: 1rem;
+    background-color: rgba(255, 255, 255, 0.514);
+    margin-left: 1.5rem;
+}
+button {
+    display: block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+button:hover {
+    background-color: rgba(0, 0, 0, 0.918);
+}
+.user-profile .user-form .edit-button {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.user-profile .user-form .dob {
+    margin-top: 1.5rem;
+}
+/* Media Queries */
+@media (min-width: 999px) and (max-width: 1230px) {
+    .user-profile {
+        width: 985px;
+    }
+    .profile-form {
+        width: 450px;
+    }
+    .user-profile .user-form {
+        width: 500px;
+    }
+}
+@media (min-width: 810px) and (max-width: 998px) {
+    .user-profile {
+        width: 800px;
+        height: 600px;
+    }
+    .profile-form {
+        width: 350px;
+    }
+    .user-profile .user-form {
+        width: 400px;
+    }
+}
+@media (min-width: 717px) and (max-width: 809px) {
+    .user-profile {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 700px;
+        height: 1000px;
+    }
+
+    .profile-form {
+        width: 85%;
+        margin-bottom: 20px;
+    }
+
+    .user-profile .user-form {
+        width: 85%;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 716px) {
+    .user-profile {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 420px;
+        height: 1000px;
+    }
+
+    .profile-form {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .user-profile .user-form {
+        width: 90%;
+        margin-top: 20px;
+    }
+    .profile-details .personal-details label{
+        font-size: 2.3rem;
+    }
+    .profile-details .personal-details input{
+        font-size: 2.3rem;
+    }
+    .profile-details .username #name{
+        font-size: 3.5rem;
+    }
+    .user-profile .user-form label{
+        font-size: 2.3rem;
+    }
+    .user-profile .user-form {
+        font-size: 2.3rem;
+    }
+}

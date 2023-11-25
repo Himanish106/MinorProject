@@ -1,0 +1,116 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.verification-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 900px;
+  height: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.verification-box h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.verification-box p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button.back-button,
+button.verify-button {
+  background-color: #000000ce;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button.back-button {
+  background-color: #000000ce;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.font {
+  font-size: 2rem;
+}
+
+.head-font {
+  font-size: 3rem;
+}
+
+input {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.password-input-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.password-toggle-button {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 18px;
+  color: #888;
+  transition: color 0.3s;
+}
+
+.password-toggle-button:hover {
+  color: #333;
+}
+form {
+  width: 100%;
+}
+.alert-message {
+  width: 100%;
+  font-size: 1.7rem;
+  border-radius: 9px;
+  height: 5rem;
+  padding: 1rem;
+  background-color: rgba(247, 157, 157, 0.411);
+}

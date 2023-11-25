@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap");
+body {
+    background-image: url("../Images/order_background.jpg");
+}
+.order-section {
+    min-height: 100vh;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+}
+.order-form {
+    display: flex;
+    justify-content: space-between;
+    width: 1300px;
+    height: auto;
+    margin: 0 auto;
+}
+.order-img {
+    width: 49%;
+}
+.order-img img {
+    display: block;
+    width: 100%;
+    height: 500px;
+}
+.order-section .order-inputs {
+    width: 47%;
+    background-color: rgba(190, 255, 255, 0.301);
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 25px;
+}
+.order-section .order-inputs textarea {
+    width: 100%;
+    padding: 0.3rem;
+    outline: 0;
+    font-size: 1.6rem;
+}
+label {
+    display: block;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    font-weight: bold;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+.pages {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "IBM Plex Sans", sans-serif;
+    padding-bottom: 1rem;
+}
+.pages .remove-button,
+.pages .add-button {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+.pageNo {
+    font-size: 2.5rem;
+}
+.pages .remove-button {
+    padding-right: 0.5rem;
+}
+.page-price {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+.total-price {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+.pay-button {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.719);
+    border-radius: 18px;
+    color: white;
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+.pay-button:hover {
+    background-color: black;
+}
+.total-price #price,
+#per-price,
+#pageNo {
+    font-weight: 400;
+}
+input{
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 2rem;
+    background: none;
+}
+@media (min-width: 1230px) {
+    .order-form {
+        width: 1200px;
+    }
+}
+@media (min-width: 990px) and (max-width: 1229px) {
+    .order-form {
+        width: 1000px;
+    }
+}
+@media (min-width: 779px) and (max-width: 989px) {
+    .order-form {
+        width: 750px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .order-section .order-inputs {
+        width: 100%;
+        background-color: rgba(90, 204, 204, 0);
+    }
+    .order-img {
+        width: 100%;
+        height: auto;
+    }
+    .order-img img {
+        display: block;
+        width: 100%;
+        height: 70%;
+    }
+}
+@media (max-width: 778px) {
+    .order-form {
+        width: 400px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .order-section .order-inputs {
+        width: 100%;
+        background-color: rgba(90, 204, 204, 0);
+    }
+    .order-img {
+        width: 100%;
+    }
+    .order-img img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}

@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+  margin-bottom: -6rem;
+}
+
+.login-box {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 900px;
+  text-align: center;
+}
+
+.login-logo {
+  color: #333;
+  margin-bottom: 20px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 600;
+}
+
+form {
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.terms-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  width: 30%; 
+  margin-left: auto;
+}
+
+.terms-link label {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  white-space: nowrap;
+}
+
+.terms-link input[type="checkbox"] {
+  margin-top: 1rem;
+  margin-right: 1px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-button,
+.login-button {
+  background-color: #000000ce;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.options {
+  margin-top: 15px;
+}
+
+.options a {
+  text-decoration: none;
+  color: rgb(25, 0, 250);
+  margin-right: 10px;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button {
+  background-color: #2e2e2ece;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-box h1 {
+  font-size: 3rem;
+}
+
+label,
+.options a {
+  font-size: 1.5rem;
+}
+
+input {
+  padding-top: 19px;
+  padding-bottom: 16px;
+  font-size: 2rem;
+}
+.password-input-container {
+  position: relative;
+}
+
+.password-toggle-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 18px;
+  color: #888;
+  transition: color 0.3s;
+}
+
+.password-toggle-button:hover {
+  color: #333;
+}
+
+.back-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.back-button::before {
+  content: "\2190"; 
+  position: absolute;
+  left: -30px; 
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0; 
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s, left 0.3s; 
+  padding-left: 4px;
+}
+
+.back-button:hover {
+  padding: 1em 3em; 
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.back-button:hover::before {
+  opacity: 1; 
+  left: 5px; 
+}
+
+.back-button,
+.login-button {
+  border-radius: 50px;
+  display: inline-block; 
+  padding: 1em 2.5em;
+  transition: padding 0.3s; 
+}
+
+.login-button:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+
+a:hover {
+  color: red;
+  transition: all 0.3s ease-in-out;
+}
+
+.terms {
+  padding: 4px;
+}
+
+.hidden {
+  display: none;
+}
+.captcha-box {
+  display: flex;
+  justify-content: space-between;
+}
+.captcha-box .generated-captcha {
+  width: 45%;
+  position: relative;
+}
+.captcha-box .captcha-input {
+  width: 50%;
+}
+.captcha-box .generated-captcha .refresh-button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  padding: 5px 5px;
+  width: 30px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transform: translateY(-100%);
+}
+.captcha-box .captcha-input #message {
+  margin-top: -1rem;
+  margin-left: 0.4rem;
+  font-size: 1.4rem;
+  color: red;
+  display: none;
+}
+.alert-message {
+  font-size: 1.7rem;
+  border-radius: 9px;
+  height: 5rem;
+  padding: 1rem;
+  background-color: rgba(247, 157, 157, 0.411);
+}
+.success-message {
+  font-size: 1.7rem;
+  border-radius: 9px;
+  height: 5rem;
+  padding: 1rem;
+  background-color: rgba(155, 255, 155, 0.377);
+}
